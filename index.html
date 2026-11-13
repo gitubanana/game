@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>클래식 테트리스 (Tetris)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <div class="sidebar left-sidebar">
+      <div class="panel">
+        <h2>HOLD</h2>
+        <canvas id="hold-canvas" width="100" height="100"></canvas>
+      </div>
+      <div class="controls-guide">
+        <h3>조작법</h3>
+        <p><span>← / →</span> 이동</p>
+        <p><span>↓</span> 소프트 드롭</p>
+        <p><span>Space</span> 하드 드롭</p>
+        <p><span>↑ / X</span> 시계 회전</p>
+        <p><span>Z</span> 반시계 회전</p>
+        <p><span>C</span> 홀드(교체)</p>
+        <p><span>P</span> 일시정지</p>
+      </div>
+    </div>
+
+    <div class="main-board">
+      <div class="header">
+        <h1>TETRIS</h1>
+      </div>
+      <div class="canvas-wrapper">
+        <canvas id="tetris-canvas" width="300" height="600"></canvas>
+        <div id="overlay" class="overlay">
+          <div id="overlay-content">
+            <h2 id="overlay-title">TETRIS</h2>
+            <p id="overlay-msg">시작하려면 버튼을 누르세요</p>
+            <button id="start-btn">게임 시작</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar right-sidebar">
+      <div class="panel">
+        <h2>NEXT</h2>
+        <canvas id="next-canvas" width="100" height="100"></canvas>
+      </div>
+      <div class="panel stats">
+        <div class="stat-item">
+          <label>SCORE</label>
+          <span id="score">0</span>
+        </div>
+        <div class="stat-item">
+          <label>LINES</label>
+          <span id="lines">0</span>
+        </div>
+        <div class="stat-item">
+          <label>LEVEL</label>
+          <span id="level">1</span>
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="pause-btn" class="sub-btn">일시정지 (P)</button>
+        <button id="restart-btn" class="sub-btn">다시하기</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="tetris.js"></script>
+</body>
+</html>
